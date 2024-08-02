@@ -1,0 +1,209 @@
+<div class="d-flex justfiy-content-center">
+    <app-header></app-header>
+
+
+<!--
+    <section class="tab"> -->
+    <!-- <article class="tab1"> -->
+      <div class="container mx-auto mt-5 participants">
+      <table class="table mt-5 pt-5 ">
+        <thead class="text-center ">
+          <tr class="text-center">
+            <th  scope="col">id</th>
+            <th scope="col">Nom </th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Email</th>
+            <!-- <th scope="col">Statut</th> -->
+         <!-- <th scope="col">Activer/Désactiver</th> -->
+            <th scope="col">Action</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+
+
+<tr *ngFor="let item of listefor">
+  <td>{{item.id_participant}}</td>
+  <td>{{item.nom}}</td>
+  <td>{{item.prenom}}</td>
+<td>{{item.email}}</td>
+  <!-- <td>{{item.active}}</td> -->
+<!-- <td>
+  <button class="btn btn-success mb-1" (click)="activateParticipant(item.id_participant)">Activer</button>
+  <button class="btn btn-danger"(click)="deactivateParticipant(item.id_participant)">Désactiver</button>
+
+</td> -->
+<td class="d-flex">
+  <!-- <button type="button"  (click)="gotoajoutercycletest(item.idParticipant)"  class="btn btn-secondary"><a >ajouter un cycle </a></button> &nbsp; &nbsp; -->
+ <button  class="btn btn-danger bx bxs-trash" (click)="confirmdelete(item)"></button>&nbsp;
+<button class="btn btn-success bx bxs-edit" (click)="openUpdateModal(item)"></button>
+
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"  id="deleteModal">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title"><b>confirmation de suppression</b></h5>
+     <button type="button" class="bx bx-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+</div>
+  <div class="modal-body">
+    <p>vous êtes sûr de vouloir supprimer ?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"   (click)="deletec()">oui</button>
+    <button type="button" class="btn btn-danger"   (click)="closeDelete()" >non</button>
+
+  </div>
+</div>
+</div>
+</div>
+</div>
+          <!--<tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>2222222</td>
+
+
+              <td>
+                <a  (click)="closeDelete()"><i class="icon "class='bx bxs-edit' ></i></a>
+                <a (click)="confirmdelete()"><i  class='bx bxs-trash' ></i></a>
+              </td>
+
+          </tr>
+              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"  id="deleteModal">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">confimation de suppression</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+              <!--  </div>
+                <div class="modal-body">
+                  <p>vous êtes sûr de vouloir supprimer ?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"  class="mod">oui</button>
+                  <button type="button" class="btn btn-danger" class="mod" >non</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+
+              <td>the Bird</td>
+
+              <td>
+                <a><i class='bx bxs-edit' ></i></a>
+                <a><i class='bx bxs-trash' ></i></a>
+              </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+
+              <td>the Bird</td>
+
+              <td>
+                <a><i class='bx bxs-edit' ></i></a>
+                <a><i class='bx bxs-trash' ></i></a>
+              </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+     </article> -->
+    <!-- </section> -->
+<!-- Update Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="updateModalLabel">Mettre à jour le participant</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="forminput">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="nom">Nom </label>
+              <input id="nom" class="form-control" type="text" formControlName="nom">
+              <div *ngIf="forminput.get('nom')?.invalid && (forminput.get('nom')?.dirty || forminput.get('nom')?.touched)">
+                <div class="alert alert-danger" *ngIf="forminput.get('nom')?.errors?.['required']">
+                  Champs requis !
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="tel">Prénom</label>
+              <input id="tel" class="form-control" type="prenom" formControlName="prenom">
+              <div *ngIf="forminput.get('prenom')?.invalid && (forminput.get('prenom')?.dirty || forminput.get('prenom')?.touched)">
+                <div class="alert alert-danger" *ngIf="forminput.get('prenom')?.errors?.['required']">
+                  Champs requis !
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="email">Email</label>
+              <input id="email" class="form-control" type="email" formControlName="email">
+              <div *ngIf="forminput.get('email')?.invalid && (forminput.get('email')?.dirty || forminput.get('email')?.touched)">
+                <div class="alert alert-danger" *ngIf="forminput.get('email')?.errors?.['required']">
+                  Champs requis !
+                </div>
+                <div class="alert alert-danger" *ngIf="forminput.get('email')?.errors?.['email']">
+                  Type email requis.
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="password">Password</label>
+              <input id="password" class="form-control" type="password" formControlName="password">
+              <div *ngIf="forminput.get('password')?.invalid && (forminput.get('password')?.dirty || forminput.get('password')?.touched)">
+                <div class="alert alert-danger" *ngIf="forminput.get('password')?.errors?.['required']">
+                  Champs requis !
+                </div>
+                <div class="alert alert-danger" *ngIf="forminput.get('password')?.errors?.['minlength']">
+                  Le mot de passe doit contenir au moins 8 caractères.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="conf_password">Confirm password</label>
+              <input id="conf_password" class="form-control" type="password" formControlName="conf_password">
+              <div *ngIf="forminput.get('conf_password')?.invalid && (forminput.get('conf_password')?.dirty || forminput.get('conf_password')?.touched)">
+                <div class="alert alert-danger" *ngIf="forminput.get('conf_password')?.errors?.['required']">
+                  Champs requis !
+                </div>
+                <div class="alert alert-danger" *ngIf="forminput.get('conf_password')?.errors?.['mustMatch']">
+                  Les mots de passe ne correspondent pas.
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+        <button type="button" class="btn btn-primary" (click)="updateParticipant()">Mettre à jour</button>
+      </div>
+    </div>
+  </div>
+</div>

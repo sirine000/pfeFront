@@ -1,0 +1,33 @@
+<!-- add-participant.component.html -->
+<app-home-header></app-home-header>
+<div class="container">
+  <div class="card">
+    <form (ngSubmit)="addParticipant()" #participantForm="ngForm">
+      <div class="inputBox m-2">
+        <input type="text" [(ngModel)]="participant.nom" name="nom" required>
+        <span class="user">Nom</span>
+      </div>
+      <div class="inputBox m-2">
+      <input type="text" [(ngModel)]="participant.prenom" name="prenom" required>
+        <span class="user">Prénom</span>
+      </div>
+
+      <div class="inputBox m-2">
+        <input type="email" [(ngModel)]="participant.email" name="email" required>
+        <span class="user">Adresse Email</span>
+      </div>
+      <div class="inputBox m-2">
+        <input type="password" [(ngModel)]="participant.password" name="password" required>
+        <span>Mot de passe</span>
+      </div>
+      <div class="inputBox m-2">
+        <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+        <span>Confirmer le mot de passe</span>
+      </div>
+      <button class="enter m-2" type="submit" [disabled]="!participantForm.form.valid || !passwordsMatch">Ajouter</button>
+      <div *ngIf="!passwordsMatch && participantForm.submitted">
+        <p class="error-message">Les mots de passe ne correspondent pas.</p>
+      </div>
+    </form>
+  </div>
+</div>

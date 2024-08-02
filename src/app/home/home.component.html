@@ -1,0 +1,190 @@
+<!-- <img src="../../assets/images/6de10fff994dd378635dafbbaaee9b07.gif" class="imgg" alt=""> -->
+
+<section >
+  <article class="imgg">
+
+<div class="row">
+
+
+  <!-- <div class="row"> -->
+<nav class="mask">
+    <img src="../../assets/images/logo.png" alt="" width="60" height="60" class="logo">
+       <!-- </a>  -->
+
+
+    <ul class="list">
+      <li><a routerLink="/home">Accueil</a></li>
+      <li><a href="#">A propos de nous </a></li>
+      <li><a href="#">Nos formations </a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <button class="search">Search</button>
+    <button class="menu">Menu</button>
+  </nav>
+
+  <button type="button" class="bou" style="cursor:pointer;" (click)="creercompte()">se connecter </button>
+  <div class="par ">
+
+      <h1><strong> Site Web E-learning </strong></h1><br>
+
+    <p>Vous-voulez améliorer vos compétence ? <br> Faire des cours en ligne ou
+       en présentiel ?<br>
+
+      Vous êtes dans le bon endroit , créer un compte pour bénéficier de la formation !</p><br>
+
+      <button >  Nos formation ! </button> &nbsp; <a (click)="creercompte()"><button > créer un compte </button></a>
+
+
+      <!-- <a href="#" class="noAccount">vous avez déjà un compte</a> -->
+
+
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form_main">
+        <p class="heading">Se connecter</p>
+
+      <div class="inputContainer">
+        <svg class="inputIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2e2e2e" viewBox="0 0 16 16">
+          <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"></path>
+        </svg>
+        <input type="text" class="inputField" formControlName="email" placeholder="Email" required>
+      </div>
+
+      <div class="inputContainer">
+        <svg class="inputIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2e2e2e" viewBox="0 0 16 16">
+          <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
+        </svg>
+        <input type="password" class="inputField" formControlName="password" placeholder="Mot de passe" required>
+      </div>
+
+      <button id="but" type="submit" class="enter">se connecter</button>
+
+      <a class="forgotLink" href="#">mot de passe oublié ?</a>
+    </form>
+<!-- <img src="../../assets/images/forme.gif "> -->
+</div>
+</article>
+</section>
+
+<section class="cni">
+
+  <div class="card">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="card-inner">
+      <img src="../../assets/images/logo.png" alt="" width="60" height="60" class="logo"><br>
+      <h1>A propos de CNI </h1>
+      <p>Le Centre National de l’Informatique est un établissement public à caractère non administratif <br>
+        doté de la personnalité civile et de l’autonomie financière. Le CNI est un organisme placé sous <br>la tutelle du Ministre des Technologies de la Communication,
+         et opérant dans les domaines<br> du secteur de l’informatique et des technologies de la communication et certifié ISO 9001version 2015.  <br><br> <button >plus d'information </button></p></div>
+
+
+</div>
+
+<div class="circle" class="c2"></div>
+<div class="circle"></div>
+
+</section>
+
+<article>
+<div>
+  <img src="../../assets/images/flèche vers le bas.gif"  class="bas">
+</div>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="cc">
+<section class="container pt-3 mb-3">
+    <div class="row pt-5 mt-30">
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+            <a class="c" href="#">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-user fa-3x head-icon"></i></div>
+                <div class="card-body text-center">
+                    <h3 class="card-title pt-1">UX Prototyping</h3>
+                    <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+            <a class="c" href="#">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-user-circle-o fa-3x head-icon"></i></div>
+                <div class="card-body text-center">
+                    <h3 class="card-title pt-1">Web &amp; UI Design</h3>
+                    <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+            <a class="c" href="#">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-address-book fa-3x head-icon"></i></div>
+                <div class="card-body text-center">
+                    <h3 class="card-title pt-1">Front-End Development</h3>
+                    <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+
+
+
+<p class="textconnect">se connecter en tant que : </p>
+
+<div class="row">
+
+  <div class="container">
+
+    <div class="connectus">
+   <button type="button" class="box-shadow" class="access" (click)="GoToAdminLog()">   <img class="imageadmin" src="../../assets/images/onelineadmin.jpg">
+   <span> admin</span></button>
+   <button type="button" class="access"   (click)="GoToformateur()" ><img class="imageadmin" src="../../assets/images/formateuricon.jpg"><span>Formateur</span></button>
+   <button type="button" class="access" (click)="GoToParticipantLogin()"><img class="imageadmin" src="../../assets/images/part.jpg"><span>Participant</span></button>
+
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+        <!-- <div class="card2">
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+            <a class="c" href="#">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-car fa-3x head-icon"></i></div>
+                <div class="card-body text-center">
+                    <h3 class="card-title pt-1">Back-End Development</h3>
+                    <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+            <a class="c" href="#">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-camera fa-3x head-icon"></i></div>
+                <div class="card-body text-center">
+                    <h3 class="card-title pt-1">Usability Testing</h3>
+                    <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+            <a class="c" href="#">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-image fa-3x head-icon"></i></div>
+                <div class="card-body text-center">
+                    <h3 class="card-title pt-1">SEO Optimization</h3>
+                    <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+    </div>
+  </div> -->
+
+
+<!-- </section> -->
+
+<!--
+
+
+</article> -->

@@ -1,0 +1,13 @@
+.formMod{
+    width: 70%;
+    height: 80%;
+    margin-top: -30%;
+    margin-left: 20%;
+}
+.alert-info{
+    text-align: center;
+    }
+    
+    .alert-danger{
+      text-align: center;
+    }

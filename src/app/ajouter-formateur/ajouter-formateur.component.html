@@ -1,0 +1,75 @@
+<div class="d-flex">
+<app-header></app-header>
+
+<div class="container mt-5 justfiy-content-center align-items-center">
+  <div class="heading">Ajouter un formateur</div>
+
+  <form class="form" [formGroup]="forminput">
+    <img src="../../assets/images/addddd.jpg" class="image2">
+
+    <label>
+      <span class="m-2 pr-2">Nom et prénom</span>
+      <input  class="form-control" class="input" type="text" placeholder="" name="nomEtPrenom" formControlName="nomEtPrenom">
+      <div *ngIf="forminput.get('nomEtPrenom')?.invalid && (forminput.get('nomEtPrenom')?.dirty || forminput.get('nomEtPrenom')?.touched)">
+        <div class="alert alert-danger" *ngIf="forminput.get('nomEtPrenom')?.errors?.['required']">
+          Champs requis !
+        </div>
+      </div>
+    </label>
+
+    <label>
+      <span class="m-2 pr-3">Num télephone</span>
+      <input  class="form-control" class="input" type="tel" placeholder="" name="tel" formControlName="tel">
+      <div *ngIf="forminput.get('tel')?.invalid && (forminput.get('tel')?.dirty || forminput.get('tel')?.touched)">
+        <div class="alert alert-danger" *ngIf="forminput.get('tel')?.errors?.['required']">
+          Champs requis !
+        </div>
+        <div  class="form-control p-2" class="alert alert-danger" *ngIf="forminput.get('tel')?.errors?.['minlength']">
+          Le numéro de téléphone doit contenir 8 caractères.
+        </div>
+      </div>
+    </label>
+
+    <label>
+      <span class="m-5 pr-3">Email</span>
+      <input  class="form-control" class="input" type="email" placeholder="" name="email" formControlName="email">
+      <div *ngIf="forminput.get('email')?.invalid && (forminput.get('email')?.dirty || forminput.get('email')?.touched)">
+        <div class="alert alert-danger" *ngIf="forminput.get('email')?.errors?.['required']">
+          Champs requis !
+        </div>
+        <div class="alert alert-danger" *ngIf="forminput.get('email')?.errors?.['email']">
+          Type email requis.
+        </div>
+      </div>
+    </label>
+
+    <label>
+      <span  class="m-4 pr-4">Password</span>
+      <input class="form-control"  class="input" type="password" placeholder="" name="password" formControlName="password">
+      <div *ngIf="forminput.get('password')?.invalid && (forminput.get('password')?.dirty || forminput.get('password')?.touched)">
+        <div class="alert alert-danger" *ngIf="forminput.get('password')?.errors?.['required']">
+          Champs requis !
+        </div>
+        <div class="alert alert-danger" *ngIf="forminput.get('password')?.errors?.['minlength']">
+          Le mot de passe doit contenir au moins 8 caractères.
+        </div>
+      </div>
+    </label>
+
+    <label>
+      <span >Confirm password</span>
+      <input class="input" type="password" placeholder="" name="conf_password" formControlName="conf_password">
+      <div *ngIf="forminput.get('conf_password')?.invalid && (forminput.get('conf_password')?.dirty || forminput.get('conf_password')?.touched)">
+        <div class="alert alert-danger" *ngIf="forminput.get('conf_password')?.errors?.['required']">
+          Champs requis !
+        </div>
+        <div class="alert alert-danger" *ngIf="forminput.get('conf_password')?.errors?.['mustMatch']">
+          Les mots de passe ne correspondent pas.
+        </div>
+      </div>
+    </label>
+
+    <button class="login-button" (click)="ajouterformateur()" type="submit">Enregistrer</button>
+  </form>
+</div>
+</div>

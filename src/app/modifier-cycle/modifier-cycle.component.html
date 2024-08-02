@@ -1,0 +1,107 @@
+ <section>
+    <app-header></app-header>
+</section>
+
+
+
+    <form class="formMod"  [formGroup]="form">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Nom formation</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="text"  [(ngModel)]="cycle.nomCycleDeFormation" formControlName="nomCycleDeFormation">
+
+          <div  *ngIf=" form.get('nomCycleDeFormation')?.invalid && ( form.get('nomCycleDeFormation')?.dirty )">
+            <div class="alert alert-danger " *ngIf=" form.get('nomCycleDeFormation')?.errors?.['required']">
+             champs requis !
+            </div>
+   
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   -->
+         </div>
+
+        </div>
+
+
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Description : </label>
+          <input type="Text" class="form-control" id="exampleInputPassword1" placeholder="text"  [(ngModel)]="cycle.description"  formControlName="description">
+          <div  *ngIf=" form.get('description')?.invalid && ( form.get('description')?.dirty )">
+            <div class="alert alert-danger " *ngIf=" form.get('description')?.errors?.['required']">
+             champs requis !
+            </div>
+          </div>
+        </div>
+
+ <div class="form-group">
+            <label for="exampleInputPassword1">Prix : </label>
+            <input type="Price" class="form-control" id="exampleInputPassword1" placeholder="Prix dt"  [(ngModel)]="cycle.prix" formControlName="prix">
+
+            <div  *ngIf=" form.get('prix')?.invalid && ( form.get('prix')?.dirty )">
+              <div class="alert alert-danger " *ngIf=" form.get('prix')?.errors?.['required']">
+               champs requis !
+              </div> 
+
+         </div> 
+        </div>
+
+
+           <div class="form-group">
+            <label for="exampleInputPassword1">Date Début : </label>
+            <input type="Date" class="form-control" id="exampleInputPassword1" placeholder=""   [(ngModel)]="cycle.dateDebut" formControlName="dateDebut"> 
+
+            <div  *ngIf=" form.get('dateDebut')?.invalid && ( form.get('dateDebut')?.dirty ||  form.get('dateDebut')?.touched)">
+              <div class="alert alert-danger " *ngIf=" form.get('dateDebut')?.errors?.['required']">
+               champs requis !
+              </div> 
+          </div>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Date Fin: </label>
+            <input type="Date" class="form-control" id="exampleInputPassword1" placeholder=""   [(ngModel)]="cycle.dateFin" formControlName="dateFin"> 
+            <div  *ngIf="form.get('dateFin')?.invalid && (form.get('dateFin')?.dirty )">
+              <div class="alert alert-danger " *ngIf="form.get('dateFin')?.errors?.['required']">
+               champs requis !
+              </div>
+          </div>
+          </div>
+        
+           <div class="form-group">
+            <label for="exampleInputPassword1">Formateur : </label>
+            <input type="" class="form-control" id="exampleInputPassword1" placeholder=""  formControlName="idFormateur"  [(ngModel)]="cycle" >
+          </div>
+
+          <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="modifier()">Modifier</button>
+        <div *ngIf="formSubmitted" class="alert alert-info" >   
+          {{ submissionMessage }}</div>
+       
+        </form>
+
+
+
+     
+   
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"  id="updatemodal">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">confirmation de modification</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
+  </div>
+      <div class="modal-body">
+        <p>vous êtes sûr de vouloir modifier ?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"  class="mod" (click)="confirmercycle()" >oui</button>
+        <button type="button" class="btn btn-danger" class="mod"  (click)="fermermodifier()" >non</button>
+      </div>
+    </div>
+  </div>
+</div>
+<tr> 
+
+
+
+  
+     
+  

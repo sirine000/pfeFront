@@ -1,0 +1,68 @@
+.certificate {
+  position: relative;
+  width: 350mm;
+  /* Width A4 in mm */
+  height: 162mm;
+  /* Height A4 in mm */
+  border: 5px solid #004080;
+  padding: 20mm;
+  margin:10px 90px;
+  box-sizing: border-box;
+  background: #f7f7f7;
+  font-family: 'Playfair Display', serif;
+    /* Ou une autre police choisie */}
+
+.certificate-header {
+  text-align: center;
+  margin-bottom: 20mm;
+}
+
+.logo {
+  width: 150px;
+  /* Adjust size as needed */
+  height: auto;
+}
+
+.certificate-title {
+  font-size: 36pt;
+  font-weight: bold;
+  color: #004080;
+  margin: 10mm 0;
+}
+
+.certificate-body {
+  text-align: center;
+  margin: 20mm 0;
+}
+
+.certificate-body p {
+  font-size: 20pt;
+  margin: 10mm 0;
+}
+
+.certificate-name {
+  font-size: 28pt;
+  font-weight: bold;
+  color: #0c1e0c;
+  margin: 10mm 0;
+}
+
+.certificate-footer {
+  text-align: center;
+  margin-top: 70mm;
+  position: absolute;
+  bottom: 20mm;
+  width: 100%;
+}
+
+.signature-line {
+  border-top: 1px solid #000;
+  width: 60%;
+  margin: 10mm auto;
+}
+
+.signature-text {
+  font-size: 14pt;
+  color: #333;
+  margin-top: 5mm;
+}

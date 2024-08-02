@@ -1,0 +1,78 @@
+
+<app-formateur-menu></app-formateur-menu>
+<html>
+<body>
+
+
+        <!-- <div clasx="div0"> -->
+       <div class="container">
+          <form class="form" >
+              <div >
+                <label for="exampleInputEmail1"> </label>
+                <!-- <input type="text" class="form-control" id="NomCycle"  placeholder="Nom de cours" name="Nom_Cycle" > -->
+                <input  class="input" type="text" name="nomCours" id="nomCours" placeholder="Nom de cours" [(ngModel)]="nomCours">
+
+              </div>
+              <div >
+                <!-- <label for="exampleInputPassword1">Description : </label> -->
+                <!-- <input type="Text" class="form-control" id="description" placeholder="Description" name="description" > -->
+                <!-- <input required="" class="input" type="email" name="nomEtPrenom" id="nomEtPrenom" placeholder="description" > -->
+
+              </div>
+              <input  type="hidden" name="idCycle" [(ngModel)]="idCycle">
+
+              <div class="formm">
+                <span class="form-title">Déposez vos fichier !</span>
+               
+                 <label for="file-input" class="drop-container">
+                <!-- <span class="drop-title">Drop files here</span>
+                or -->
+                <input  type="file"   id="file-input"   (change)="onFileChange($event)"  multiple>
+                                <!-- <input type="file" accept="image/*" required="" id="file-input"> -->
+                               
+              </label>
+
+               <!-- <div  *ngIf="selectedFiles.length > 0">
+                <h4 >Fichiers sélectionnés :</h4>
+                <ul> 
+                  <li *ngFor="let file of selectedFiles">
+                    {{ file.name }}
+                  </li> 
+                </ul>
+              </div>  -->
+            </div>
+              
+              <!-- <label for="myfile">Selectionner un fichier : </label> &nbsp;
+             <img src="./../../assets/images/pdf.png" width="10%"><input   src="./../../assets/images/pdf.png"type="file" id="myfile" name="myfile"><br><br> -->
+              <!-- <input type="submit"> -->
+                         
+       <!--        
+              <button type="submit"   (click)="ajoutercycle()">Enregistrer</button> -->
+           <!-- <button type="button" type="submit"    >Enregistrer</button>  -->
+              <!-- <button type="button" class="btn btn-secondary btn-lg">Large button</button> -->
+         
+              <input class="login-button" type="submit" value="Enregistrer" (click)="uploadFiles()" >
+
+        <p>{{message }}</p>
+          </form>
+          </div>
+      
+
+<!-- <h1>Show File-select Fields</h1>
+
+<h3>Show a file-select field which allows only one file to be chosen:</h3>
+<form action="/action_page.php">
+  <label for="myfile">Select a file:</label>
+  <input type="file" id="myfile" name="myfile"><br><br>
+  <input type="submit">
+</form>
+
+<h3>Show a file-select field which allows multiple files:</h3>
+<form action="/action_page.php">
+  <label for="myfile">Select files:</label>
+  <input type="file" id="myfile" name="myfile" multiple><br><br>
+  <input type="submit">
+</form>
+
+</body>
+</html> -->

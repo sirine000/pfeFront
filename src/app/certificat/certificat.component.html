@@ -1,0 +1,17 @@
+<button class="btn btn-success mt-2  ml-2" (click)="generateCertificate()">Télécharger le Certificat</button>
+
+<div id="certificate" class="certificate">
+  <div class="certificate-header">
+    <img src="../../assets/images/elearning.jpg" alt="Logo" class="logo"> <!-- Ajuster le chemin vers votre logo -->
+    <h1 class="certificate-title">Certificat de Réussite</h1>
+  </div>
+  <div class="certificate-body">
+    <p>Nous certifions que</p>
+    <p class="certificate-name">{{ userName }}</p>
+    <p>a réussi le cours avec succès.</p>
+  </div>
+  <div class="certificate-footer">
+    <div class="signature-line"></div>
+    <div class="signature-text">Signature</div>
+  </div>
+</div>

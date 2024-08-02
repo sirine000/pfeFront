@@ -1,0 +1,85 @@
+<div class="d-inline">
+   <app-header></app-header>
+
+
+
+<div class="container h-75 position-relative" style="top:-120px;">
+   <form class="formMod p-1"   [formGroup]="forminput"  >
+       <div class="form-group m-1">
+         <label for="exampleInputEmail1">Nom de cycle</label>
+         <label>
+          <!-- <span style="transition-delay:0ms">U</span><span style="transition-delay:50ms">s</span><span style="transition-delay:100ms">e</span><span style="transition-delay:150ms">r</span><span style="transition-delay:200ms">n</span><span style="transition-delay:250ms">a</span><span style="transition-delay:300ms">m</span><span style="transition-delay:350ms">e</span> -->
+      </label>
+         <input type="text" class="form-control" id="NomCycle"  placeholder="nom de cycle" name="nomCycleDeFormation"   formControlName="nomCycleDeFormation">
+
+        <div  *ngIf="forminput.get('nomCycleDeFormation')?.invalid && (forminput.get('nomCycleDeFormation')?.dirty || forminput.get('nomCycleDeFormation')?.touched)">
+          <div class="alert alert-danger " *ngIf="forminput.get('nomCycleDeFormation')?.errors?.['required']">
+           champs requis !
+          </div>
+
+       </div>
+       <div class="form-group m-1">
+         <label for="exampleInputPassword1">Description  </label>
+         <input type="Text" class="form-control" id="description" placeholder="text" name="description"  formControlName="description">
+         <div  *ngIf="forminput.get('description')?.invalid && (forminput.get('description')?.dirty || forminput.get('description')?.touched)">
+          <div class="alert alert-danger " *ngIf="forminput.get('description')?.errors?.['required']">
+           champs requis !
+          </div>
+       </div>
+       <div class="form-group m-1">
+           <label for="exampleInputPassword1">Prix  </label>
+           <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Prix dt" name="prix"  formControlName="prix">
+           <div  *ngIf="forminput.get('prix')?.invalid && (forminput.get('prix')?.dirty || forminput.get('prix')?.touched)">
+            <div class="alert alert-danger " *ngIf="forminput.get('prix')?.errors?.['required']">
+             champs requis !
+            </div>
+         </div>
+
+         <div class="form-group m-1">
+           <label for="exampleInputPassword1">Date début</label>
+           <input type="date" class="form-control" id="exampleInputPassword1" placeholder="" name="dateDebut"  formControlName="dateDebut">
+           <div  *ngIf="forminput.get('dateDebut')?.invalid && (forminput.get('dateDebut')?.dirty || forminput.get('dateDebut')?.touched)">
+            <div class="alert alert-danger " *ngIf="forminput.get('dateDebut')?.errors?.['required']">
+             champs requis !
+            </div>
+         </div>
+
+         <div class="form-group m-1">
+            <label for="exampleInputPassword1">Date fin </label>
+            <input type="date" class="form-control" id="exampleInputPassword1" placeholder="" name="dateFin"  formControlName="dateFin">
+            <div  *ngIf="forminput.get('dateFin')?.invalid && (forminput.get('dateFin')?.dirty || forminput.get('dateFin')?.touched)">
+              <div class="alert alert-danger " *ngIf="forminput.get('dateFin')?.errors?.['required']">
+               champs requis !
+              </div>
+          </div>
+
+            <div class="form-group m-1">
+              <label for="nomEtPrenom">Formateur</label>
+              <select class="form-control" id="nomEtPrenom" class="select" name="nomEtPrenom"    formControlName="nomEtPrenom"   #dropdown   >
+                <option   class="option"  value="" >--choisir un formateur--</option>
+
+                <option class="option" *ngFor="let formateur of formateurs" [value]="formateur" >{{formateur}}</option>
+
+              </select>
+
+             <div  *ngIf="forminput.get('nomEtPrenom')?.invalid && (forminput.get('nomEtPrenom')?.dirty || forminput.get('nomEtPrenom')?.touched)">
+                <div class="alert alert-danger " *ngIf="forminput.get('nomEtPrenom')?.errors?.['required']">
+                 champs requis !
+                </div>
+
+            </div>
+         </div>
+
+
+
+       &nbsp;
+       <button class="button p-3" type="submit"    (click)="ajouter()" >Enregistrer  </button>
+       <div *ngIf="formSubmitted" class="alert alert-info">
+         {{ submissionMessage }}</div>
+
+       </div>
+         </div>
+         </div></div>
+         </div></form>
+
+

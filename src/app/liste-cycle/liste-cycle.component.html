@@ -1,0 +1,174 @@
+
+
+<!-- <section> -->
+    <app-header></app-header>
+    <!-- </section> -->
+    <!-- <tr  *ngFor="let liste of listecycle">
+
+
+      <td>{{liste.id}}</td>
+      <td>{{liste.NomCycle}}</td>
+      <td>{{liste.description}}</td>
+      <td>{{liste.prix}}</td>
+      <td>{{liste.dateDebut}}</td>
+      <td>{{liste.dateFin}}</td>
+         <td>{{liste.nom_prof}}</td>
+
+
+</tr> -->
+
+<section class="card-area pb-5">
+
+  <div class="container">
+
+     <div class="row justify-content-center">
+
+        <div class="col-lg-4 col-md-7 col-sm-9" *ngFor="let liste of listecycle">
+           <div class="single-card card-style-one">
+              <div class="card-image">
+                 <!-- <img src="./../../assets/images/java.jpg" alt="Image" /> -->
+              </div>
+           <div class="container">
+
+              <div class="card-content">
+                 <h4 class="card-title">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <p class="idd"><strong class="cen">ID : {{liste.idCycle}}</strong></p>
+                  <p> <strong>Nom :</strong>
+                     {{liste.nomCycleDeFormation}}</p>
+                 </h4>
+
+
+
+                 <p class="text"><strong>Description :</strong>
+                  {{liste.description}}</p>
+                <p><strong>Prix :</strong> {{liste.prix}}</p>
+                <p><strong>Date Début :</strong> {{liste.dateDebut}}</p>
+                 <p><strong>Date Fin :</strong> {{liste.dateFin}}</p>
+                 <p *ngIf="liste.formateurs"><strong>nom de formateur :</strong> {{liste.formateurs.nomEtPrenom}}</p><br><br>
+                 <div class="container" class="con">
+                  <p><strong>Nom de cours :</strong></p>
+                 <p *ngIf="liste.formateurs"><strong>Les cours ajoutés :</strong> {{liste.formateurs.nomEtPrenom}}</p>
+                </div>
+<br><br>
+
+                 <!-- <p ><strong>Formateur :</strong>{{onOptionSelected(nom_prof)}}</p> -->
+                 <!-- &nbsp;&nbsp;&nbsp;  -->
+                 <!-- <button class="button"><a href="modifierCycle">modifier</a> </button> &nbsp;  <button  class="button" (click)="supprimercycle(liste.id)">supprimer</button> -->
+                 <button class="button"><a (click)="confirmationmodifierCycle(liste.idCycle)">Modifier</a> </button> &nbsp;
+                 <button  class="button"><a (click)="confirmdelete(liste)">Supprimer</a></button> &nbsp;
+                 <!-- <button  class="button"><a (click)="confirmdelete(liste)"> Détails</a></button> -->
+
+
+              </div>
+
+           </div>
+
+        </div>
+
+      </div>
+
+
+
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"  id="deleteModal">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title">confimation de suppression</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+         <div class="modal-body">
+           <p>vous êtes sûr de vouloir supprimer ?</p>
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"  class="mod" (click)="deletec()">oui</button>
+           <button type="button" class="btn btn-danger" class="mod"  (click)="closeDelete()" >non</button>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- <tr>
+
+         <a><i class='bx bxs-edit' ></i></a>
+         <a><i class='bx bxs-trash' ></i></a>
+
+   </tr> -->
+
+
+
+
+
+
+<!-- <section> -->
+<!--
+    <section class="tab"> -->
+    <!-- <article class="tab1"> -->
+     <!--<table class="table table-striped">
+        <thead class="text-center">
+          <tr class="text-center">
+            <th  scope="col">id</th>
+            <th scope="col">Nom de cycle</th>
+
+            <th scope="col">description</th>
+            <th scope="col">prix :</th>
+            <th scope="col">date Début</th>
+            <th scope="col">date Fin</th>
+            <th scope="col">Nom de formateur</th>
+            <th scope="col">action</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let liste of listecycle">
+           // <th scope="row" ></th> -->
+<!--
+            <td>{{liste.id_cycle}}</td>
+            <td>{{liste.NomCycle}}</td>
+            <td>{{liste.description}}</td>
+            <td>{{liste.prix}}</td>
+            <td>{{liste.dateDebut}}</td>
+            <td>{{liste.dateFin}}</td>
+
+
+
+</tr>
+               </tbody>-->
+<!--
+              <td>
+                <a  (click)="closeDelete()"><i class="icon "class='bx bxs-edit' ></i></a>
+                <a (click)="confirmdelete()"><i  class='bx bxs-trash' ></i></a>
+              </td> -->
+
+          <!--</tr>
+          </tbody>
+              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"  id="deleteModal">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">confimation de suppression</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            <!-- </div>
+                <div class="modal-body">
+                  <p>vous êtes sûr de vouloir supprimer ?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"  class="mod">oui</button>
+                  <button type="button" class="btn btn-danger" class="mod" >non</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <tr>
+
+                <a><i class='bx bxs-edit' ></i></a>
+                <a><i class='bx bxs-trash' ></i></a>
+
+          </tr>
+
+
+      </table>
+
+   </article> -->
+    <!-- </section> -->
+
+  <!-- </section>-->
