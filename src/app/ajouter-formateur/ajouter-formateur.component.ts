@@ -38,7 +38,7 @@ export class AjouterFormateurComponent  {
   ajouterformateur() {
     this.formSubmitted = true;
     if (this.forminput.invalid) {
-      return;
+      return ;
     }
 
     const formateur = this.forminput.value;
@@ -63,12 +63,13 @@ export class AjouterFormateurComponent  {
       const control = formGroup.controls[controlName];
       const matchingControl = formGroup.controls[matchingControlName];
       if (matchingControl.errors && !matchingControl.errors['mustMatch']) {
-        return;
+        return ;
       }
       if (control.value !== matchingControl.value) {
         matchingControl.setErrors({ mustMatch: true });
       } else {
         matchingControl.setErrors(null);
+      
       }
     };
   }

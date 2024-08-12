@@ -230,3 +230,18 @@ opacity: 0.90;
   }
   
   
+.logo{
+  /* margin-top: 70%;
+  margin-left: -9px; */
+  width: 150px;
+  height: 110%;
+border-radius: 280%;
+margin-left: -2%;
+/* border: 1px black solid; */
+/* padding: 20%; */
+border-radius: 280px;
+background: #e0e0e0;
+box-shadow:  20px 20px 60px #cfcfcf,
+           -16px -20px 60px #ffffff;
+          
+}

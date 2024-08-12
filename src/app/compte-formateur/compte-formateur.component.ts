@@ -68,7 +68,7 @@ export class CompteFormateurComponent implements OnInit {
         .subscribe(
           () => {
             this.loadFormateur();
-            this.snackBar.open('Photo téléchargée avec succès', 'Fermer', {
+            this.snackBar.open('Photo enregistrer avec succès !', 'Fermer', {
               duration: 3000,
             });
           },
@@ -101,7 +101,7 @@ export class CompteFormateurComponent implements OnInit {
       .modifierformateur(this.formateurId, updatedFormateur)
       .subscribe(() => {
         localStorage.setItem('formateur', JSON.stringify(updatedFormateur));
-        this.snackBar.open('Formateur mis à jour avec succès', 'Fermer', {
+        this.snackBar.open('Formateur modifer avec succès !', 'Fermer', {
           duration: 3000,
         });
       });

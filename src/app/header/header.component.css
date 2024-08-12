@@ -44,19 +44,28 @@ z-index: 100;
 
 } */
 .logo{
-    margin-top: 70%;
-    margin-left: 35%;
-
-
+    /* margin-top: 70%;
+    margin-left: -9px; */
+    width: 150px;
+    height: 150px;
+/* border: 1px black solid; */
+/* padding: 20%; */
+border-radius: 280px;
+background: #e0e0e0;
+box-shadow:  20px 20px 60px #cfcfcf,
+             -16px -20px 60px #ffffff;
+            
+/* margin-left: -10%; */
 }
 img{
-    margin-left: 20px;
+    margin-left: -47px;
+    margin-top: -10px;
 }
 i a {
     display: inline-block;
 }
 .sidebar{
-   font-size: 20px;
+   font-size: 25px;
    backdrop-filter: blur(80px);
    /* background-color: #0370b8; */
   background-color: #ffffff  ;
@@ -83,26 +92,30 @@ i a {
 button {
 
 border: none;
-margin: 1%;
-margin-left: -7%;
+/* margin: 1%; */
+margin-left: -40px;
 background-color: #fafbfb;
 /* background-color: #FFD300  ; */
 border-radius: 5%;
-width: 200px;
+width: 240px;
 height: 55px;
 color: #000000 ;
-font-family: 'Brush Script MT', cursive;
-font-size: 132%;
+font-family: 'Brush Script MT';
+font-size: 92%;
 }
 button i {
- margin-left: 0%; 
+ margin-left: -2%; 
 }
-
+i{
+    text-align: left;
+}
  button:hover{
-    background-color: #000000  ;
+    background-color: #dfdfdf  ;
     color: rgb(255, 255, 255);
     /* margin-left: -7%;
-    width: 95%; */
+    width: 170%; */
+
+    
 }
  i:hover span:hover{
     color: white;
@@ -114,16 +127,21 @@ a{
 }
 a:hover{
     text-decoration: none;
-    color:black
+    color:rgb(255, 255, 255)
 }
 i{
     /* margin-right: 3%; */
-    
+    color: #0000004d;
 }
-i span{
-    margin-top: 5%;
+span{
 
+
+color: #000000;
 }
+
+/* i{
+    background-color: #ffffff;
+} */
 .dropbtn {
   background-color: #4CAF50;
   color: white;

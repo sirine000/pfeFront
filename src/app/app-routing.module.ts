@@ -25,6 +25,11 @@ import { CertificatComponent } from './certificat/certificat.component';
 import { CompteAdminComponent } from './compte-admin/compte-admin.component';
 import { AdminGuard } from './adminauth.guard';
 import { FormateurAuthGuard } from './formateur-auth.guard';
+import { ProfilparticipantComponent } from './profilparticipant/profilparticipant.component';
+import { OffreemploiComponent } from './offreemploi/offreemploi.component';
+import { CycleparticipantComponent } from './cycleparticipant/cycleparticipant.component';
+import { CoursParticipantComponent } from './cours-participant/cours-participant.component';
+import { CompteparticipantComponent } from './compteparticipant/compteparticipant.component';
 
 const routes: Routes = [
   { path: 'user', component: UserComponent },
@@ -34,18 +39,20 @@ const routes: Routes = [
   { path: 'ajouterformateur', component: AjouterFormateurComponent },
   { path: 'listeFormateur', component: ListeFormateurComponent },
   { path: 'listepar', component: ListeparticipantComponent },
+  { path:'profilpar', component:ProfilparticipantComponent},
   {
     path: 'postcycleetformateur',
     component: AddCycleComponent,
     canActivate: [FormateurAuthGuard],
   },
+
   // {path:"ajoutercycle/:id_formateur" , component:AddCycleComponent},
   { path: 'home', component: HomeComponent },
   { path: 'homeheader', component: HomeHeaderComponent },
   { path: 'creercompte', component: CREERCompteComponent },
   { path: 'adminlogin', component: AdminloginComponent },
   { path: 'seconnecterformateur', component: ConnecterformateurComponent },
-
+{path:'offreemploi',component:OffreemploiComponent},
   {
     path: 'modifiercycle/:idCycle',
     component: ModifierCycleComponent,
@@ -89,6 +96,11 @@ const routes: Routes = [
   },
 
   { path: 'certificat', component: CertificatComponent },
+
+  {path:'cycleparticipant',component:CycleparticipantComponent},
+
+  {path:'coursParticipant',component:CoursParticipantComponent},
+  {path:'compteParticipant',component:CompteparticipantComponent},
 ];
 
 @NgModule({

@@ -31,6 +31,11 @@ import { CompteFormateurComponent } from './compte-formateur/compte-formateur.co
 import { CertificatComponent } from './certificat/certificat.component';
 import { SafePipe } from './safe.pipe';
 import { CompteAdminComponent } from './compte-admin/compte-admin.component';
+import { ProfilparticipantComponent } from './profilparticipant/profilparticipant.component';
+import { CycleparticipantComponent } from './cycleparticipant/cycleparticipant.component';
+import { OffreemploiComponent } from './offreemploi/offreemploi.component';
+import { CoursParticipantComponent } from './cours-participant/cours-participant.component';
+import { CompteparticipantComponent } from './compteparticipant/compteparticipant.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +65,12 @@ import { CompteAdminComponent } from './compte-admin/compte-admin.component';
     CompteFormateurComponent,
     CertificatComponent,
     SafePipe,
-    CompteAdminComponent
+    CompteAdminComponent,
+    ProfilparticipantComponent,
+    CycleparticipantComponent,
+    OffreemploiComponent,
+    CoursParticipantComponent,
+    CompteparticipantComponent
   ],
   imports: [
     BrowserModule,

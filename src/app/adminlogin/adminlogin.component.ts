@@ -20,7 +20,8 @@ export class AdminloginComponent {
 
   onSubmit() {
     console.log(this.email)
-    this.adminService.login(this.email, this.password).subscribe(
+    console.log(this.password)
+    this.adminService.login(this.email,this.password).subscribe(
       (response: any) => {
                     localStorage.setItem(
                       'admin',

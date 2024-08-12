@@ -45,6 +45,9 @@ export class HomeComponent {
     this.router.navigate(['./creercompte']);
   }
 
+  offreemploi() {
+    this.router.navigate(['./offreemploi']);
+  }
   onSubmit() {
     if (this.loginForm.valid) {
       this.userService.login(this.loginForm.value).subscribe(

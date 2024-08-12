@@ -167,6 +167,7 @@
     border-radius: 200%;
     box-shadow: right 50%;
     width: 300px;
+    height: 20px;
     margin-top: 1%;
     /* background-attachment: fixed; */
     margin-left: 100px;
@@ -175,13 +176,12 @@
 .image2{
   border-radius: 20px;
   box-shadow: right 100%;
-  width: 300px;
+  width: 50%;
   margin-top: 1%;
   /* background-attachment: fixed; */
-  margin-left: 100px;
+  margin-left: 180px;
   /* width: 90%; */
-  height: 410px;
-  width: 80%;
+  height: 350px;
 }
 body{
   background-attachment: fixed;
@@ -205,7 +205,7 @@ body{
   /* background: #e0e0e0; */
   box-shadow:  30px 30px 100px #d5d5d5,
                -30px -30px 100px #ebebeb;
-
+margin-left: 30%;
                /* background: transparent; */
   }
 
@@ -273,7 +273,7 @@ body{
     width: 100%;
     font-weight: bold;
   /* background: linear-gradient(45deg, rgb(234, 223, 171) 0%, rgb(140, 180, 127) 100%); */
-  background-color: #7d7a7a;
+  background-color: #696969;
     color: white;
     padding-block: 15px;
     margin: 20px auto;
